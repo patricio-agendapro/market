@@ -1,0 +1,19 @@
+// Use this to write your custom SCSS
+@media (min-width: 1400px){
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1140px;
+    }
+}
+body{
+    background-color: white;
+}
+body.home {
+    background-image: url(https://agendapro.com/wp-content/uploads/2020/10/Rectangle-1028.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+// .navbar.navbar-light.fixed .btn:not(.btn-expand) {
+//     background: $orange;
+//     border-color: $orange;
+//     color: #fff;
+// }
