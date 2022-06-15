@@ -52,7 +52,8 @@ COPY ./docker-conf/sphinxsearch/sphinxsearch /etc/default/sphinxsearch
 COPY ./docker-conf/sphinxsearch/stop_words_es.txt /etc/sphinxsearch/data/stop_words_es.txt
 COPY . /app/
 
-RUN /app/php artisan octane:install
+RUN chmod 777 -R /app/storage/logs;
+RUN chmod 777 -R /app/storage/;
 
 EXPOSE 80 443
 
