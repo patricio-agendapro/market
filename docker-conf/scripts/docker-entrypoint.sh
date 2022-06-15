@@ -11,7 +11,7 @@
 indexer --all --rotate
 searchd
 
-chmod 666 -R /app/storage/logs/
+chmod 777 -R /app/storage
 
 # KEEP CONTAINER ALIVE
 /usr/bin/tail -f /var/log/nginx/access.log

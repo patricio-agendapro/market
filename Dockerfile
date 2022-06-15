@@ -52,6 +52,8 @@ COPY ./docker-conf/sphinxsearch/sphinxsearch /etc/default/sphinxsearch
 COPY ./docker-conf/sphinxsearch/stop_words_es.txt /etc/sphinxsearch/data/stop_words_es.txt
 COPY . /app/
 
+RUN /app/php artisan octane:install
+
 EXPOSE 80 443
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
