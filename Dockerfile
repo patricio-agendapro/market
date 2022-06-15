@@ -33,11 +33,7 @@ php$PHP_VERSION-interbase php$PHP_VERSION-ldap php$PHP_VERSION-tidy \
 php$PHP_VERSION-memcached php-tcpdf php-redis php-imagick php-mongodb php-pear php-dev;
 
 #php-swoole
-RUN git clone https://github.com/swoole/swoole-src.git && \
-cd swoole-src &&\
-phpize && \
-./configure && \
-make && make install
+RUN pecl install swoole;
 
 #sphinxsearch
 RUN apt-get install -y sphinxsearch;
@@ -55,6 +51,6 @@ COPY . /app/
 RUN chmod 777 -R /app/storage/logs;
 RUN chmod 777 -R /app/storage/;
 
-EXPOSE 80 443
+EXPOSE 80 443 8000
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
