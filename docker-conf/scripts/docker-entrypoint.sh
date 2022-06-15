@@ -12,3 +12,5 @@ indexer --all --rotate
 searchd
 
 
+# KEEP CONTAINER ALIVE
+/usr/bin/tail -f /var/log/nginx/access.log
