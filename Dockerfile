@@ -50,6 +50,7 @@ COPY ./docker-conf/nginx/default /etc/nginx/sites-available/default
 COPY ./docker-conf/sphinxsearch/sphinx.conf /etc/sphinxsearch/sphinx.conf
 COPY ./docker-conf/sphinxsearch/sphinxsearch /etc/default/sphinxsearch
 COPY ./docker-conf/sphinxsearch/stop_words_es.txt /etc/sphinxsearch/data/stop_words_es.txt
+COPY . /app/
 
 EXPOSE 80 443
 
