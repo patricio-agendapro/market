@@ -15,9 +15,9 @@ use App\Http\Controllers\MarketController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/{country}/market/search', [SearchController::class, 'search']);
 
