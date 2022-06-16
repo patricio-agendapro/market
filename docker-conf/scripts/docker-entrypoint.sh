@@ -11,5 +11,8 @@
 indexer --all --rotate
 searchd
 
+# START octane swoole
+/bin/php /app/artisan octane:start -q
+
 # KEEP CONTAINER ALIVE
 /usr/bin/tail -f /var/log/nginx/access.log
